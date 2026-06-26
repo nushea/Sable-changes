@@ -1,0 +1,44 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Sable",
+  "version": "1.18.3",
+  "identifier": "moe.sable.client",
+
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:8080",
+    "beforeDevCommand": "pnpm run dev",
+    "beforeBuildCommand": "pnpm run build"
+  },
+
+  "app": {
+    "windows": [
+      {
+        "title": "Sable",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  
+"bundle": {
+  "active": true,
+  "targets": "all",
+  "icon": [
+    "../public/res/logo-maskable/logo-maskable-36x36.png",
+    "../public/res/logo-maskable/logo-maskable-48x48.png",
+    "../public/res/logo-maskable/logo-maskable-72x72.png",
+    "../public/res/logo-maskable/logo-maskable-96x96.png",
+    "../public/res/logo-maskable/logo-maskable-144x144.png",
+    "../public/res/logo-maskable/logo-maskable-192x192.png",
+    "../public/res/logo-maskable/logo-maskable-256x256.png",
+    "../public/res/logo-maskable/logo-maskable-384x384.png",
+    "../public/res/logo-maskable/logo-maskable-512x512.png"
+  ]
+}
+}
